@@ -28,14 +28,14 @@ header {
 
 
 header.sticky {
-    background-color: #f1f1f1;
+    background-color: #111;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     padding: 5px 50px;
 }
 
 header.sticky .logo span,
 header.sticky .menu .items {
-    color: #111;
+    color: #FFF;
 }
 
 header.sticky .logo {
@@ -43,14 +43,14 @@ header.sticky .logo {
 }
 
 header.sticky .items:hover {
-    color: orange;
+    color: hsla(123, 96%, 44%, 0.979);
     font-weight: 600;
 }
 .logo {
     position: relative;
     font-size: 3em;
     letter-spacing: 1px;
-    color: hsla(123, 100%, 29%, 0.979);
+    color: hsla(123, 96%, 44%, 0.979);
     font-weight: 700;
     user-select: none;
     letter-spacing: 2px;
