@@ -267,10 +267,11 @@ section {
     font-size: 1.5em;
 }
 
-.cop :nth-child(2) {
-    font-size: 0.8em;
+.cop .media__small {
+    font-size: 1em;
     margin-top: 5px;
     margin-bottom: 10px;
+    line-height: 1em;
 }
 .cop :nth-last-child(1) {
     margin-bottom: 10px;
@@ -482,14 +483,6 @@ section {
 }
 
 
-.fav__whats {
-    transition: all ease-in-out 250ms;
-}
-.fav__whats:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-
-
-}
 
 
 /*-------- MEDIA ---------*/
@@ -629,8 +622,11 @@ section {
 
 @media (max-width: 381px) {
 
-    .footer .cop p {
-        font-size: 0.8em;
+    .footer .cop .media__small {
+        font-size: 1em;
+        line-height: 1.5em;
     }
+
+
 
 }
