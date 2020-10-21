@@ -42,10 +42,12 @@ header.sticky .logo {
     font-size: 2em;
 }
 
-header.sticky .items:hover {
-    color: hsla(123, 96%, 44%, 0.979);
-    font-weight: 600;
+
+header.sticky .items:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
+
 .logo {
     position: relative;
     font-size: 3em;
@@ -66,30 +68,34 @@ header .menu {
     display: flex;
 }
 
-header ul li a {
+header .items {
     display: inline-block;
     color: #fff;
     text-decoration: none;
     margin-left: 20px;
     font-weight: 400;
-    transition: all 0.25s ease;
     font-size: 1em;
     cursor: pointer;
+    position: relative;
 }
 
-header li a:hover {
-    color: hsla(123, 96%, 44%, 0.979);
-    font-weight: 600;
- /*   font-weight: 800;
-    font-size: large;
-    padding: 4px 5px;
-    transform: translateY(-5px);
+header .items::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background:hsla(123, 96%, 44%, 0.979);
 
-/*    color: orange;
-    font-weight: bold;
-    text-shadow:3px 3px 10px  rgba(0, 0, 0, 1);
-    font-size: 1.2em;
-    transform: translateY(-2.8px);*/
+    transition: transform 250ms ease-in;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+header .items:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /*------- banner 1 --------------*/
@@ -333,6 +339,14 @@ section {
 .expert .content .box {
     width: 250px;
     margin: 15px;
+    position: relative;
+    border: 2px solid #111;
+    background: #111;
+
+}
+
+.expert span {
+    transition: transform 250ms ease-in;
 }
 
 .expert .content .box .imgbox {
@@ -341,29 +355,92 @@ section {
     height: 300px;
 }
 
-.expert .content .box .imgbox img {
+
+.gerente span {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    transition: all 0.5s ease;
+    background: url(./images/gerente.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
-.expert .content .box .imgbox img:hover, 
-.menu .content .box .imgbox img:hover {
-    transform: translateY(-10px) scale(1.1);
+
+.labor_one span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(./images/testi1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.labor_two span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(./images/testi2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.labor_three span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(./images/trabajador1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.menu .content .box:hover .imgbox img {
+    transform: scale(1.1);
 }
 
 .expert .content .box .text {
     padding: 15px 0 5px;
 }
 .expert .content .box .text h3{
-    /*color: #111;*/
     text-align: center;
     font-weight: 400;
     font-size: 1em;
+}
+
+.expert .content .box:hover .text h3{
+    visibility: hidden;
+}
+
+.content .box .text-box {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.content .box .text-box .texto {
+    color: #fff;
+    padding: 40px;
+    transition: opacity 250ms ease-in 150ms;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.content .box:hover .text-box {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.content .box:hover .text-box .texto {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .icono .fab, 
