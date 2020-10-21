@@ -57,6 +57,8 @@ header.sticky .items:hover::after {
     user-select: none;
     letter-spacing: 2px;
     transition: all 0.5s ease;
+    display: flex;
+
 }
 
 .logo span {
@@ -479,6 +481,17 @@ section {
     color: #fff;
 }
 
+
+.fav__whats {
+    transition: all ease-in-out 250ms;
+}
+.fav__whats:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+
+
+}
+
+
 /*-------- MEDIA ---------*/
 @media (max-width: 1004px) {
     header,
@@ -575,6 +588,8 @@ section {
     }
     
 }
+
+
 
 @media (max-width: 652px) {
     section {
